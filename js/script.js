@@ -32,7 +32,7 @@ function saveToCart() {
     }
   }
 
-  if (this.src.includes("outline")) {
+  if (this.src.includes("cart.png")) {
     this.src = "img/cart-in.png";
 
     cartArr.push(cart);
