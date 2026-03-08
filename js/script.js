@@ -21,7 +21,7 @@ for (let i = 0; i < cartIcons.length; i++) {
 }
 
 function saveToCart() {
-  let carted = {
+  let cart = {
     id: this.dataset.id,
     img: this.dataset.img,
   };
@@ -35,10 +35,10 @@ function saveToCart() {
   if (this.src.includes("outline")) {
     this.src = "img/cart-in.png";
 
-    cartArr.push(carted);
+    cartArr.push(cart);
   } else {
     this.src = "img/cart.png";
   }
 
-  localStorage.carted = JSON.stringify(cartArr);
+  localStorage.cart = JSON.stringify(cartArr);
 }
