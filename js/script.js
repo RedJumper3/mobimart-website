@@ -7,7 +7,7 @@ if (localStorage.cart) {
 } else {
   cartArr = [];
 }
-
+/* Overall cart logic in lines 11-44 adapted from art-gallery-fef-2026 github repository */
 for (let i = 0; i < cartIcons.length; i++) {
   for (let j = 0; j < cartArr.length; j++) {
     if (cartIcons[i].dataset.id === cartArr[j].id) {
