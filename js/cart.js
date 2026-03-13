@@ -2,7 +2,7 @@ const cartGrid = document.querySelector(".cart-grid");
 
 let cartArr = JSON.parse(localStorage.cart);
 
-for (let i = 0; i < cartArr.length; i++) {
+for (let i = cartArr.length - 1; i >= 0; i--) {
   let container = document.createElement("div");
   container.style.position = "relative";
   container.style.display = "inline-block";
