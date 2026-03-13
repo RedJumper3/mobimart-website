@@ -104,7 +104,7 @@ header {
     text-align: center;
   }
 }
-
+/* Grids for products.html and cart.html below inspired by grids from main.css in art-gallery-fef-2026 */
 .product-grid {
   display: grid;
 
