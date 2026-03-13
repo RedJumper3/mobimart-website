@@ -23,10 +23,15 @@ for (let i = cartArr.length - 1; i >= 0; i--) {
   removeBtn.style.width = "70px";
   removeBtn.style.height = "70px";
   removeBtn.style.cursor = "pointer";
+  removeBtn.dataset.id = cartArr[i].id;
   removeBtn.addEventListener("click", function () {
-    cartArr.splice(i, 1);
-    localStorage.cart = JSON.stringify(cartArr);
-    container.remove();
+    let id = this.dataset.id;
+    let index = cartArr.findIndex((item) => item.id === id);
+    if (index !== -1) {
+      cartArr.splice(index, 1);
+      localStorage.cart = JSON.stringify(cartArr);
+      container.remove();
+    }
   });
   container.appendChild(removeBtn);
 
